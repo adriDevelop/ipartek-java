@@ -20,9 +20,18 @@ public class Principal7 {
             }
         }
 
+        ciudadesDuplicadas.forEach(ciudad -> {
+            ciudadesNoDuplicadas.remove(ciudad);
+        });
+
         System.out.println("Ciudades duplicadas");
         ciudadesDuplicadas.forEach(System.out::println);
         System.out.println("Ciudades no duplicadas");
+
+
+
         ciudadesNoDuplicadas.forEach(System.out::println);
+
+
     }
 }
