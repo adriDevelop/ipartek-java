@@ -26,7 +26,6 @@ public class Utilidades {
             if (valor.compareTo(valorMaximo) > 0) {
                 valorMaximo = valor;
             }else if (valor.compareTo(valorMaximo) < 0){
-                valorMaximo = valorMaximo;
             }
         }
 
