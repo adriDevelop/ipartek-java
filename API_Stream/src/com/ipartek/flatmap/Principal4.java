@@ -64,5 +64,15 @@ public class Principal4 {
         System.out.println("========");
         System.out.println(p1);
         System.out.println(p2);
+
+        // Necesitamos conseguir un ArrayList con todos los viajes que han hecho todos nuestros clientes
+        List<Persona> clientes = List.of(p1, p2);
+
+        List<Viaje> viajesClientes =  clientes.stream()
+                .map(Persona::getArrayListViajes)
+                .flatMap(viaje -> viaje.stream())
+                .toList();
+
+        viajesClientes.forEach(System.out::println);
     }
 }

@@ -28,6 +28,6 @@ public class Viaje {
 
     @Override
     public String toString() {
-        return "\n" + this.destino + ":" + this.precio + "€";
+        return this.destino + ":" + this.precio + "€";
     }
 }

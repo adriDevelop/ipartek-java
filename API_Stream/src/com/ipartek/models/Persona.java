@@ -25,7 +25,11 @@ public class Persona {
     public String getListadoViajes() {
         return listadoViajes.stream()
                 .map(Viaje::toString)
-                .collect(Collectors.joining());
+                .reduce("", (a, b) -> a + b + "\n" );
+    }
+
+    public List<Viaje> getArrayListViajes(){
+        return this.listadoViajes;
     }
 
     public void viajar(Viaje viaje) {
